@@ -1,0 +1,27 @@
+html {
+    box-sizing: border-box;
+}
+
+* {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    box-sizing: inherit;
+}
+
+h1 {
+    text-align: center;
+}
+
+body {
+    color-scheme: light dark;
+    background-color: Canvas;
+    color: CanvasText;
+
+    display: flex;
+    flex-direction: column;
+
+    margin: 0;
+    padding: 0;
+
+    /* The code below allows me to put the footer at the bottom */
+    min-height: 100vh;
+}
