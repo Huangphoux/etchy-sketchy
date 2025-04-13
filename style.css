@@ -7,10 +7,6 @@ html {
     box-sizing: inherit;
 }
 
-h1 {
-    text-align: center;
-}
-
 body {
     color-scheme: light dark;
     background-color: Canvas;
@@ -29,6 +25,22 @@ body {
     min-height: 100vh;
 }
 
+h1 {
+    text-align: center;
+    margin: 20px 0px 0px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 20px 0px;
+    border: none;
+    border-radius: 20px;
+
+    background-color: cornflowerblue;
+    color: black;
+
+}
+
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -36,6 +48,6 @@ body {
     justify-content: center;
     align-items: center;
 
-    width: 320px;
-    height: 320px;
+    width: 500px;
+    height: 500px;
 }

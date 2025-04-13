@@ -1,30 +1,43 @@
 const container = document.querySelector(".container");
 
-const itemSize = 30;
+function makeGrid() {
+    const items = document.querySelectorAll(".item");
 
-for (let width = 0; width < 16; width++) {
-    for (let height = 0; height < 16; height++) {
-        const item = document.createElement("div");
+    // delete old grid
+    items.forEach((item) => {
+        container.removeChild(item);
+    });
 
-        item.style.width = itemSize + "px";
-        item.style.height = itemSize + "px";
-        item.style.backgroundColor =
-            "color-mix(in srgb, Canvas, CanvasText 30%)";
+    let itemNumber = prompt(
+        "Enter the number of squares per side for the new grid.\nAny number larger than 100 will be rounded down to 100.",
+        16
+    );
 
-        // set class="item", not style=.item
-        item.setAttribute("class", "item");
+    if (itemNumber > 100) {
+        itemNumber = 100;
+    }
 
-        container.appendChild(item);
+    const itemSize = 500 / itemNumber;
+
+    for (let width = 0; width < itemNumber; width++) {
+        for (let height = 0; height < itemNumber; height++) {
+            const item = document.createElement("div");
+
+            item.style.width = itemSize + "px";
+            item.style.height = itemSize + "px";
+            item.style.backgroundColor =
+                "color-mix(in srgb, Canvas, CanvasText 30%)";
+            item.addEventListener("mouseover", () => {
+                item.style.backgroundColor = "white";
+            });
+
+            // set class="item", not style=.item
+            item.setAttribute("class", "item");
+
+            container.appendChild(item);
+        }
     }
 }
 
-container.style.width = itemSize * 16 + "px";
-container.style.height = itemSize * 16 + "px";
-
-const items = document.querySelectorAll(".item");
-
-items.forEach((item) => {
-    item.addEventListener("mouseover", () => {
-        item.style.backgroundColor = "white";
-    });
-});
+const button = document.querySelector("button");
+button.addEventListener("click", makeGrid);
