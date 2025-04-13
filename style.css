@@ -18,7 +18,8 @@ body {
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+
+    /* justify-content: center; */
     align-items: center;
 
     margin: 0;
@@ -37,11 +38,4 @@ body {
 
     width: 320px;
     height: 320px;
-}
-
-.item {
-    width: 20px;
-    height: 20px;
-
-    background-color: white;
 }
