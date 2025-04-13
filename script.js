@@ -1,3 +1,7 @@
+function random(max) {
+    return Math.floor(Math.random() * max);
+}
+
 const container = document.querySelector(".container");
 
 function makeGrid() {
@@ -28,7 +32,8 @@ function makeGrid() {
             item.style.backgroundColor =
                 "color-mix(in srgb, Canvas, CanvasText 30%)";
             item.addEventListener("mouseover", () => {
-                item.style.backgroundColor = "white";
+                item.style.backgroundColor = `rgb(
+                        ${random(255)},${random(255)},${random(255)})`;
             });
 
             // set class="item", not style=.item
