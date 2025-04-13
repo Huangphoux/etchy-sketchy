@@ -48,6 +48,8 @@ button {
     justify-content: center;
     align-items: center;
 
-    width: 500px;
-    height: 500px;
+    width: 320px;
+    height: 320px;
+
+    outline: 5px solid white;
 }

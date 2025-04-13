@@ -21,7 +21,7 @@ function makeGrid() {
         itemNumber = 100;
     }
 
-    const itemSize = 500 / itemNumber;
+    const itemSize = 320 / itemNumber;
 
     for (let width = 0; width < itemNumber; width++) {
         for (let height = 0; height < itemNumber; height++) {
@@ -29,8 +29,8 @@ function makeGrid() {
 
             item.style.width = itemSize + "px";
             item.style.height = itemSize + "px";
-            item.style.backgroundColor =
-                "color-mix(in srgb, Canvas, CanvasText 30%)";
+            item.style.backgroundColor = "darkgrey";
+
             item.addEventListener("mouseover", () => {
                 item.style.backgroundColor = `rgb(
                         ${random(255)},${random(255)},${random(255)})`;
